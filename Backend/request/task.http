@@ -1,0 +1,27 @@
+@api = http://localhost:3000/task
+
+
+GET {{api}}
+###
+GET {{api}}/8
+###
+GET {{api}}/count
+
+###
+POST {{api}}
+Content-Type: application/json
+
+{
+    "titulo": "dasdasdasd asdas",
+    "descripcion": "tarea asdasasdasdasd"
+}
+###
+DELETE {{api}}/4
+###
+PUT  {{api}}/5
+Content-Type: application/json
+
+{
+    "titulo": "TASK de otra mdu",
+    "descripcion": "tarea asdasasdasdasd"
+}
