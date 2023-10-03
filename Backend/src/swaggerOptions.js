@@ -6,5 +6,5 @@ export const options = {
       title: "Res api con express y mysql2",
     },
   },
-  apis: [path.join(__dirname, "../src/routes/**/*.js")],
+  apis: ["./src/routes/**/*.js"],
 };
