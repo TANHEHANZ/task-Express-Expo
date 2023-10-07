@@ -9,7 +9,8 @@ import { colors } from "./styles/globalStyles";
 
 const Stack = createNativeStackNavigator();
 //Yokoi Kenji conferencias
-
+//diganle karina
+// Otra noche
 const App = () => {
   return (
     <NavigationContainer>
@@ -18,6 +19,7 @@ const App = () => {
           name="Home"
           component={HomeScreen}
           options={({ navigation }) => ({
+            title: "Aplicacion de Tareas",
             headerStyle: { backgroundColor: colors.primary },
             headerTitleStyle: { color: colors.width },
             headerRight: () => (
@@ -32,7 +34,16 @@ const App = () => {
             ),
           })}
         />
-        <Stack.Screen name="TaskFormScrean" component={TaskForm} />
+        <Stack.Screen
+          name="TaskFormScrean"
+          component={TaskForm}
+          options={{
+            title: "Crear nueva Tarea",
+            headerStyle: { backgroundColor: colors.primary },
+            headerTitleStyle: { color: colors.width },
+            headerTintColor: "#fff",
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
