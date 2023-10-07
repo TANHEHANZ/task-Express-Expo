@@ -1,0 +1,14 @@
+por que te fuiste  el polaco 
+
+despues de instalar debemos instalar
+---------------------------------------------------------------- para  la navegacion----------------------------------------------------------------
+npm install @react-navigation/native
+---------------------------------------------------------------- despues de instalar hay mas dependencias con expo ----------------------------------------------------------------
+npx expo install react-native-screens react-native-safe-area-context
+----------------------------------------------------------------con native cli ----------------------------------------------------------------
+npm install react-native-screens react-native-safe-area-context
+---------------------------------------------------------------- visitar ----------------------------------------------------------------
+https://reactnavigation.org/docs/getting-started/
+---------------------------------------------------------------- hay diferentes formas de navegacion ----------------------------------------------------------------
+npm install @react-navigation/native-stack
+para la navegacion por arriba 

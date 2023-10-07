@@ -12,11 +12,12 @@ POST {{api}}
 Content-Type: application/json
 
 {
-    "titulo": "dasdasdasd asdas",
+    "titulo": "ver dede la app asdas",
+    
     "descripcion": "tarea asdasasdasdasd"
 }
 ###
-DELETE {{api}}/4
+DELETE {{api}}/13
 ###
 PUT  {{api}}/5
 Content-Type: application/json
