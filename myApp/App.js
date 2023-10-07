@@ -8,6 +8,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { colors } from "./styles/globalStyles";
 
 const Stack = createNativeStackNavigator();
+//Yokoi Kenji conferencias
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
           component={HomeScreen}
           options={({ navigation }) => ({
             headerStyle: { backgroundColor: colors.primary },
-            headerTitleStyle: { color: colors.quaternary },
+            headerTitleStyle: { color: colors.width },
             headerRight: () => (
               <TouchableOpacity
                 onPress={() => (
@@ -26,7 +27,7 @@ const App = () => {
                   console.log("precionado")
                 )}
               >
-                <Text>Agregar</Text>
+                <Text style={{ color: "#fff" }}>Agregar</Text>
               </TouchableOpacity>
             ),
           })}

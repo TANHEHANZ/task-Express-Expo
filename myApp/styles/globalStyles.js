@@ -6,6 +6,7 @@ export const colors = {
   complement: "#8AA6A3",
   tertiary: "#4C5958",
   quaternary: "#BFBFBF",
+  width: "#fff",
 };
 
 export const globalStyles = StyleSheet.create({
@@ -18,7 +19,6 @@ export const globalStyles = StyleSheet.create({
   },
   text: {
     color: colors.quaternary,
-    fontFamily: "Helvetica",
     fontSize: 16,
   },
 });
