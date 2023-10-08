@@ -1,16 +1,18 @@
 import React from "react";
-import { Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 import HomeScreen from "./screens/HomeScreen";
 import TaskForm from "./screens/TaskForm";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { colors } from "./styles/globalStyles";
+import Srollviwer from "./screens/Srollviwer";
 
 const Stack = createNativeStackNavigator();
 //Yokoi Kenji conferencias
 //diganle karina
 // Otra noche
+// por mil noches
 const App = () => {
   return (
     <NavigationContainer>
@@ -19,19 +21,45 @@ const App = () => {
           name="Home"
           component={HomeScreen}
           options={({ navigation }) => ({
-            title: "Aplicacion de Tareas",
+            title: "App de Tareas",
             headerStyle: { backgroundColor: colors.primary },
             headerTitleStyle: { color: colors.width },
-            headerRight: () => (
-              <TouchableOpacity
-                onPress={() => (
-                  navigation.navigate("TaskFormScrean"),
-                  console.log("precionado")
-                )}
-              >
-                <Text style={{ color: "#fff" }}>Agregar</Text>
-              </TouchableOpacity>
-            ),
+            headerRight: () => {
+              return (
+                <View style={{ flexDirection: "row" }}>
+                  <TouchableOpacity
+                    onPress={() => (
+                      navigation.navigate("TaskFormScrean"),
+                      console.log("precionado")
+                    )}
+                  >
+                    <Text
+                      style={{
+                        color: "#fff",
+                        marginHorizontal: 10,
+                        marginHorizontal: 10,
+                        padding: 10,
+                      }}
+                    >
+                      Agregar
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate("Srollviwer")}
+                  >
+                    <Text
+                      style={{
+                        color: "#fff",
+                        marginHorizontal: 10,
+                        padding: 10,
+                      }}
+                    >
+                      Sroll
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              );
+            },
           })}
         />
         <Stack.Screen
@@ -39,6 +67,16 @@ const App = () => {
           component={TaskForm}
           options={{
             title: "Crear nueva Tarea",
+            headerStyle: { backgroundColor: colors.primary },
+            headerTitleStyle: { color: colors.width },
+            headerTintColor: "#fff",
+          }}
+        />
+        <Stack.Screen
+          name="Srollviwer"
+          component={Srollviwer}
+          options={{
+            title: "SrollAlaDerecha",
             headerStyle: { backgroundColor: colors.primary },
             headerTitleStyle: { color: colors.width },
             headerTintColor: "#fff",
